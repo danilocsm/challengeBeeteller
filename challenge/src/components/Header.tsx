@@ -28,13 +28,17 @@ export default function Header() {
         <RoundedButton onClick={() => alert("clicked")}>
           <Bell
             size={25}
-            className={`${isLoadingData ? `text-[#DBDBDB]` : `text-black`}`}
+            className={`${
+              isLoadingData ? `text-[#DBDBDB]` : `text-black`
+            } transition-colors duration-500 ease-in-out`}
           />
         </RoundedButton>
         <RoundedButton onClick={() => console.log("clicked")}>
           <List
             size={25}
-            className={`${isLoadingData ? `text-[#DBDBDB]` : `text-black`}`}
+            className={`${
+              isLoadingData ? `text-[#DBDBDB]` : `text-black`
+            } transition-colors duration-500 ease-in-out`}
           />
         </RoundedButton>
         <RoundedButton onClick={() => console.log("clicked")}>
