@@ -25,7 +25,7 @@ export default function Header() {
         ))}
       </div>
       <div className='flex flex-row gap-x-2'>
-        <RoundedButton onClick={() => alert('clicked')}>
+        <RoundedButton onClick={() => console.log('clicked')}>
           <Bell
             size={25}
             className={`${

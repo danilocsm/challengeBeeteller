@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { AppContext } from "../App";
-
 type RoundedButtonProps = {
   children?: React.ReactNode;
   onClick: () => void;
