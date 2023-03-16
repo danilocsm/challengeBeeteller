@@ -1,4 +1,11 @@
-export default function AccountBalance(color: string, className?: string) {
+type AccountBalanceProps = {
+  color: string;
+  className?: string;
+};
+export default function AccountBalance({
+  color,
+  className,
+}: AccountBalanceProps): React.ReactElement {
   return (
     <svg
       className={className}

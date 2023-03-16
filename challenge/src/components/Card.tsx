@@ -15,7 +15,7 @@ export default function Card({ icon, title, subtitle, value }: CardProps) {
 
   return (
     <div
-      className={`group flex flex-col justify-between w-[300px] h-[250px] ${
+      className={`group flex flex-col justify-between h-[250px] ${
         isLoadingData ? 'bg-[#EDEDED] pointer-events-none' : 'bg-[#2F2F2F]'
       } rounded-[20px] p-4 bg-gradient-to-br hover:from-[#2F2F2F] hover:to-zinc-600 transition-all duration-500 ease-in-out`}>
       <div>
@@ -24,6 +24,7 @@ export default function Card({ icon, title, subtitle, value }: CardProps) {
           className='text-[0.9rem]'
           text={title}
           animationCondition={isLoadingData}
+          textColor='text-white'
         />
       </div>
       <div className='flex flex-row justify-between'>
@@ -32,12 +33,14 @@ export default function Card({ icon, title, subtitle, value }: CardProps) {
             className='text-[0.9rem]'
             text={subtitle}
             animationCondition={isLoadingData}
+            textColor='text-white'
           />
           <br />
           <AnimatedSpan
             className='text-[2rem]'
             text={`R$ ${value}`}
             animationCondition={isLoadingData}
+            textColor='text-white'
           />
         </p>
         <button className='group-hover:block hidden group-hover:animate-horizontalBounce w-[2rem] h-[2rem]'>

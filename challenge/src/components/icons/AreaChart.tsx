@@ -1,4 +1,11 @@
-export default function AreaChart(color: string, className?: string) {
+type AreaChartProps = {
+  color: string;
+  className?: string;
+};
+export default function AreaChart({
+  color,
+  className,
+}: AreaChartProps): React.ReactElement {
   return (
     <svg
       className={className}
