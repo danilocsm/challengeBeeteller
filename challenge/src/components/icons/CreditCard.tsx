@@ -1,4 +1,12 @@
-export default function CreditCard(color: string, className?: string) {
+type CreditCardProps = {
+  color: string;
+  className?: string;
+};
+
+export default function CreditCard({
+  color,
+  className,
+}: CreditCardProps): React.ReactElement {
   return (
     <svg
       className={className}
