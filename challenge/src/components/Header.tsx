@@ -4,7 +4,8 @@ import RoundedButton from './RoundedButton';
 import logo from '../assets/brand_name.png';
 import profilePicture from '../assets/profile_picture.png';
 import { useContext } from 'react';
-import { AppContext } from '../App';
+import { DataContext } from './DataProvider';
+import Progressbar from './ProgressBar';
 
 const links = [
   { text: 'Home', href: '/' },
@@ -14,10 +15,13 @@ const links = [
 ];
 
 export default function Header() {
-  const { isLoadingData } = useContext(AppContext);
+  const { isLoadingData } = useContext(DataContext);
 
   return (
-    <nav className='flex flex-row justify-between items-center border-b-2 p-6'>
+    <nav className='relative flex flex-row justify-between items-center border-b-2 p-6 w-full'>
+      {isLoadingData ? null : (
+        <Progressbar className='absolute bottom-0 left-0 animate-progressAnimation' />
+      )}
       <img src={logo} />
       <div className='flex flex-row gap-x-2'>
         {links.map((link) => (

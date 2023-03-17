@@ -1,7 +1,7 @@
 import { ArrowRight } from '@phosphor-icons/react';
 import { useContext } from 'react';
-import { AppContext } from '../App';
 import AnimatedSpan from './AnimatedSpan';
+import { DataContext } from './DataProvider';
 
 type CardProps = {
   icon: React.ReactElement;
@@ -11,7 +11,7 @@ type CardProps = {
 };
 
 export default function Card({ icon, title, subtitle, value }: CardProps) {
-  const { isLoadingData } = useContext(AppContext);
+  const { isLoadingData } = useContext(DataContext);
 
   return (
     <div
@@ -21,7 +21,7 @@ export default function Card({ icon, title, subtitle, value }: CardProps) {
       <div>
         {icon}
         <AnimatedSpan
-          className='text-[0.9rem]'
+          className='text-[0.85rem] leading-4'
           text={title}
           animationCondition={isLoadingData}
           textColor='text-white'
@@ -30,7 +30,7 @@ export default function Card({ icon, title, subtitle, value }: CardProps) {
       <div className='flex flex-row justify-between'>
         <p>
           <AnimatedSpan
-            className='text-[0.9rem]'
+            className='text-[0.85rem] leading-4'
             text={subtitle}
             animationCondition={isLoadingData}
             textColor='text-white'
@@ -38,7 +38,10 @@ export default function Card({ icon, title, subtitle, value }: CardProps) {
           <br />
           <AnimatedSpan
             className='text-[2rem]'
-            text={`R$ ${value}`}
+            text={`${new Intl.NumberFormat('pt-br', {
+              style: 'currency',
+              currency: 'BRL',
+            }).format(value)}`}
             animationCondition={isLoadingData}
             textColor='text-white'
           />
