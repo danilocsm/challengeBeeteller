@@ -53,6 +53,8 @@ Adicione comandos de execução e exemplos que você acha que os usuários achar
 
 ## ⚙️ Produção
 
+Caso não queira executar localmente, pode visitar a aplicação em produção [aqui](https://challenge-beeteller.vercel.app)
+
 ## ✅ Pontos a serem melhorados
 
 A seguir, seguem alguns pontos de melhoria:
