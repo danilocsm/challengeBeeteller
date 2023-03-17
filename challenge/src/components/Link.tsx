@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { AppContext } from '../App';
+import { DataContext } from './DataProvider';
 
 type NavitemProps = {
   text: string;
@@ -7,7 +7,7 @@ type NavitemProps = {
 };
 
 export default function Link({ text, href }: NavitemProps) {
-  const { isLoadingData } = useContext(AppContext);
+  const { isLoadingData } = useContext(DataContext);
 
   return (
     <div

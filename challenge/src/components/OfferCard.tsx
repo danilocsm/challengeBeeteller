@@ -1,19 +1,17 @@
 import { ArrowRight } from '@phosphor-icons/react';
 import { useContext } from 'react';
-import { AppContext } from '../App';
+import { DataContext } from '../components/DataProvider';
 import offerPicture from '../assets/offer_picture.png';
 import AnimatedSpan from './AnimatedSpan';
 import Store from './icons/Store';
 
-type OfferCardProps = {
-  title: string;
-  subtitle: string;
-  amount: number;
-  offerType: string;
-};
+export default function OfferCard() {
+  const {
+    isLoadingData,
+    appData: { offers },
+  } = useContext(DataContext);
 
-export default function OfferCard({ title, subtitle, amount }: OfferCardProps) {
-  const { isLoadingData } = useContext(AppContext);
+  const offer = offers ? offers.offers[0] : undefined;
   return (
     <div className='group bg-[#EDEDED] rounded-[1rem] w-[323px] h-[368px] flex flex-col items-start hover:drop-shadow-2xl transition-all duration-500 ease-in-out'>
       {isLoadingData ? (
@@ -30,12 +28,12 @@ export default function OfferCard({ title, subtitle, amount }: OfferCardProps) {
           className='h-fit group-hover:h-0'
         />
         <AnimatedSpan
-          text={title}
+          text={offer?.title || ''}
           animationCondition={isLoadingData}
           className={'text-[1rem] leading-[1.5rem] text-[#2F2F2F]'}
         />
         <AnimatedSpan
-          text={subtitle}
+          text={offer?.subtitle || ''}
           animationCondition={isLoadingData}
           className={'text-[0.85rem] text-[#666666] leading-[1rem]'}
         />
@@ -43,7 +41,7 @@ export default function OfferCard({ title, subtitle, amount }: OfferCardProps) {
           text={`${new Intl.NumberFormat('pt-br', {
             style: 'currency',
             currency: 'BRL',
-          }).format(amount)}`}
+          }).format(offer?.amount || 0)}`}
           animationCondition={isLoadingData}
           className={'text-[1.5rem] leading-[2rem]'}
         />
