@@ -1,52 +1,71 @@
 # Challenge BeeTeller
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
+> Pequeno projeto desenvolvido utilizando React + TypeScript + TailwindCSS para o processo de seleção da empresa BeeTeller para vaga de desenvolvedor Frontend.
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+## 👨‍💻 Desafio
+
+Este desafio foi muito intrigante e divertido. Apesar do pouco tempo que tive para fazê-lo, separando as poucas horas do dia que sobravam dado que atualmente tenho um trabalho full-time como desenvolvedor, consegui aprender e praticar ainda mais minhas habilidades em fron-end.
+
+## Escolha das tecnologias
+
+Como já apresentado, tive que separa poucas horas da minha semana para me dedicar a este desafio. Desta forma, a escolha das tecnologias certas foi essencial para que eu pudesse ter progresso. As duas principais, além de React e Typescript, que tenho alguma experiência, foram o TailwindCSS e o Vite. O TailwindCSS é excepicional para produtividade e estilização rápida e eficaz, por prover nível muito próximo do CSS puro, me fornecendo bastante flexibilidade. Já o Vite é uma ferramente moderna e recente para bundle. Por usar o ESbuild por baixo, ele tem um desempenho bem superior ao WebPack para o build além de facilitar e melhorar muito a DX, pois possui suporte nativo a HMR entre outras funcionalidades de desenvolvimento.
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
-<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
-* Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-* Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-* Você leu `<guia / link / documentação_relacionada_ao_projeto>`.
 
-## 🚀 Instalando <nome_do_projeto>
+* Ter instalado a versão `18.14.0` do Node.js
+* Ter instalado em seu computador qualquer navegador moderno `<Chrome / Firefox / Edge>`
+* Ter instalado qualquer editor de código moderno `< VSCode / NVim / JetBrains >`
+* Ter instalado qualquer ferramenta de CLI `<Powershell / WSL / bash >`
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+## ☕ Rodando Challenge BeeTeller
 
-Linux e macOS:
-```
-<comando_de_instalação>
-```
+Para rodar Challegen BeeTeller localmente, siga estas etapas:
 
-Windows:
-```
-<comando_de_instalação>
-```
+1. Primeiramente, clone o repositório localmente utilizando o comando:
 
-## ☕ Usando <nome_do_projeto>
+  ```bash
+  git clone https://github.com/danilocsm/challengeBeeteller.git
+  ```
 
-Para usar <nome_do_projeto>, siga estas etapas:
+2. Em seguinda, navegue para o diretório onde se encontra a implementação do projeto:
 
-```
-<exemplo_de_uso>
-```
+  ```bash
+  cd challengeBeeteller/challenge
+  ```
+
+3. Agora, rode o seguinte comando para instalar todas as depedencias do projeto:
+
+  ```bash
+  npm ci
+  ```
+
+4. Por fim, com todas as dependências já instaladas, rode a aplicação utilizando o comando:
+
+  ```bash
+  npm run dev
+  ```
+
+5. Pronto, agora basta clicar [aqui](http://localhost:3000) ou abrir o endereço `http://localhost:3000` no seu navegador que a aplicação estará executando.
 
 Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
 
-## 📫 Contribuindo para <nome_do_projeto>
-<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
-Para contribuir com <nome_do_projeto>, siga estas etapas:
+## ⚙️ Produção
 
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <nome_branch>`.
-3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-5. Crie a solicitação de pull.
+## ✅ Pontos a serem melhorados
 
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+A seguir, seguem alguns pontos de melhoria:
+
+* [ ] Adicionar responsividade
+* [ ] Melhorar animações
+
+## 📚 Tech Stack
+
+1. React 18
+2. Typescript
+3. TailwindCSS
+4. Vite
 
 ## 🤝 Colaboradores
 
@@ -55,8 +74,8 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Danilo Medeiros no GitHub"/><br>
+      <a href="https://www.linkedin.com/in/danilo-cesar-ribeiro-garcia-de-medeiros-314130258/">
+        <img src="./misc/danilo_profile_picutre.jpg" width="100px;" alt="Foto do Danilo Medeiros no GitHub"/><br>
         <sub>
           <b>Danilo Medeiros</b>
         </sub>
@@ -69,4 +88,4 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE) para mais detalhes.
 
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
+[⬆ Voltar ao topo](#challenge-beeteller)<br>
