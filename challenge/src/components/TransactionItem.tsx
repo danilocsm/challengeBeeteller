@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { AppContext } from '../App';
 import AnimatedSpan from './AnimatedSpan';
+import { DataContext } from './DataProvider';
 import AccountBalance from './icons/AccountBalance';
 import AreaChart from './icons/AreaChart';
 import CreditCard from './icons/CreditCard';
@@ -15,7 +15,7 @@ export default function TransactionItem({
   value,
   title,
 }: TransactionItemProps) {
-  const { isLoadingData } = useContext(AppContext);
+  const { isLoadingData } = useContext(DataContext);
 
   return (
     <div className='bg-[#EDEDED] flex flex-row rounded-[1rem] items-center justify-between p-4 w-[813px] h-[80px]'>
